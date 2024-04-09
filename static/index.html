@@ -1,16 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<main>
-    <h1>Найди себе друга!</h1>
+    <main>
+        <h1>Найди себе друга!</h1>
+        <form action="/pets/orders" method="POST">
+            <label for="pet_name">Имя питомца:</label>
+            <input type="text" id="pet_name" name="pet_name"><br><br>
 
-    <!--Форму размещай тут-->
+            <label for="pet_type">Тип питомца:</label>
+            <select id="pet_type" name="pet_type">
+                <option value="Кошечка">Кошечка</option>
+                <option value="Собачка">Собачка</option>
+                <option value="Попуг">Попуг</option>
+                <option value="Хомячок">Хомячок</option>
+                <option value="Рыбки">Рыбки</option>
+                <option value="Капибара">Капибара</option>
+            </select><br><br>
 
-</main>
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" name="quantity"><br><br>
+
+            <label for="gender">Пол животного:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Мужской</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Женский</label><br><br>
+
+            <label for="eye_color">Цвет глаз:</label>
+            <input type="color" id="eye_color" name="eye_color"><br><br>
+
+            <label for="phone_number">Номер телефона:</label>
+            <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="XXX-XXX-XXXX"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <input type="submit" value="Отправить">
+            <input type="reset" value="По новой">
+        </form>
+
+
+    </main>
 </body>
+
 </html>
